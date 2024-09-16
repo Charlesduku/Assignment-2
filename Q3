@@ -1,57 +1,60 @@
-tybony_inevnoyr =100
-zl_qvpg = {'xrl1':'inyhr1','xrl2':'inyhr2''xrl3':'inyhr3'}
-qrs cebprff_ahzoref()
-     tybony tybony_inevnoyr
-     ybpny_inevnoyr = 5
-     ahzoref = (1,2,3,4,5)
-     
-     juvyr ybpny_inevnoyr >0:
-         vs ybpny_inevnoyr % 2 == 0:
-             ahzoref.erzbir (ybpnyh_inevnoyr)
-             ybpnyh_inevnoyr-= 1
-             
-        erghea ahzoref
-zl_frg = {1,2,3,4,5,5,4,3,2,1}
-erfyg = cebprff_ahzoref(ahzoref=z1_frg)
+tybony_inevnoyr = 100
+zl_qvpg = {'xrl1': 'inyhr1', 'xrl2': 'inyhr2', 'xrl3': 'inyhr3'}
 
-qrs zbqvs1_qvpg():
-    ybpnyh_inevnoyr =10
-    zl_qvpg['xr14'] = ybpnyh_inevnoyr
-
-zbqvs1_qvpg(5)
-
-qrs hcqngr_tybony():
+def cebprff_ahzoref(ahzoref):
     tybony tybony_inevnoyr
-    tybony_inevnoyr +=10
+    ybpny_inevnoyr = 5
+    ahzoref = [1, 2, 3, 4, 5]
     
-sbe v va zl_qvpg:
-    cevag(v)
-    v +=1
+    while ybpny_inevnoyr > 0:
+        if ybpny_inevnoyr % 2 == 0:
+            ahzoref.remove(ybpny_inevnoyr)
+        ybpny_inevnoyr -= 1
     
-vs zl_frg vf abg abar nag zl_qvpg ['xr14']== 10:
-    cevag("pbaqvgvba zrg!")
+    return ahzoref
+
+zl_frg = {1, 2, 3, 4, 5, 5, 4, 3, 2, 1}
+erfyg = cebprff_ahzoref(list(zl_frg))
+
+def zbqvs1_qvpg():
+    ybpny_inevnoyr = 10
+    zl_qvpg['xrl4'] = ybpny_inevnoyr
+
+zbqvs1_qvpg()
+
+def hcqngr_tybony():
+    global tybony_inevnoyr
+    tybony_inevnoyr += 10
     
-vs 5 abg va zl_qvpg
-    cvag ("5 abg sbhaq va gur qvpgvbane1!")
+    for v in zl_qvpg:
+        print(v)
+        v += 1
+    
+    if zl_frg and zl_qvpg['xrl4'] == 10:
+        print("pbaqvgvba zrg!")
+    
+    if 5 not in zl_qvpg:
+        print("5 abg sbhaq va gur qvpgvbane1!")
 
-cevag (tybony_inevnoyr)
-cevag(zl_qvpg)
-cevag (zl_frg)
+print(tybony_inevnoyr)
+print(zl_qvpg)
+print(zl_frg)
 
-
-def encrypt (text, key):
-    encrypted_text =""
+def encrypt(text, key):
+    encrypted_text = ""
     for char in text:
-        if char.islapha ():
-            shifted = ord(char)+key
+        if char.isalpha():
+            shifted = ord(char) + key
             if shifted > ord('z'):
-                shifted -=26
-            elif shifted < order ('a'):
-                shifted +=26
-            encrypted_text+=chr(shifyed)
+                shifted -= 26
+            elif shifted < ord('a'):
+                shifted += 26
+            encrypted_text += chr(shifted)
         else:
-            encrypted_text +=char
+            encrypted_text += char
     return encrypted_text
-    
-    key =?????????????????
-encrypted_code = encrypt(original_code, key) print (encrypted_code)
+
+key = 3  # Example key
+original_code = "your original code here"
+encrypted_code = encrypt(original_code, key)
+print(encrypted_code)
