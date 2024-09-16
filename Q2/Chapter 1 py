@@ -1,0 +1,33 @@
+## Chapter 1
+## Name: Charles Duku
+## Date: 11-09-2024
+from PIL import Image
+Import time
+# Generate the number
+current_time = int(time.time())
+generated_number = (current_time % 100) + 50
+if generated_number % 2 == 0:
+ generate_number +=10
+# open impage and load all the pixels
+chapter1_image = image = image.open ('chapter 1.png')
+pixels = chapter1_image.load()
+# Width and height of image
+Width, height = chapter1_image.size
+# set the width and height of output
+new_image = image.new('RGB', (width, height))
+new_ image_pixls = new image.load()
+# Sum of all the red (r) pixel values in the new_image
+red_pixel_sum = 0
+# double loop here for visiting all the pixels in the image
+for x in range (width):
+    for y in range (height):
+    r,g,b = pixels (x,y)
+    new_r = min(255, r+generated_number)
+    new_g = min(255, g+generated_number)
+    new_b = min(255, b+generated_number)
+    new_image_pixls[x,y] = (new_r, new_g, new_b)
+    red_pixel_sum+ red_ixel_sum + new_r
+# Save resultant image
+new_image.save('chapter1out.png')
+# Print out the sum of all red pizels
+print (" sum of all red pixel values in new_image:', red_pixel_sum)

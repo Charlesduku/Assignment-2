@@ -1,0 +1,32 @@
+## Chapter 2
+## Name: Charles Duku
+## Date 11-09-2024
+# store a long string
+string = '56aAww1984sktr235270aYmn145ss785fsq31D0'
+# variabl;es to store the seperated strings
+num_strings = ""
+alpha_string = ""
+# loop character-by-character
+for character in string:
+ if character.isdigit():
+    num_string += character
+elif character.isalpha():
+    alpha_string += character
+# find out the even numbers in the "num_string" even_nums = {}
+for character in numb_string:
+    if int (character) % 2 == 0:
+        even_nums.append (character)
+# Find out the upper case letters in alpha_string
+    Upper_chars = []
+    for character in alpha_string:
+        if character.isupper():
+        upper_chars.append (character)
+# ASCII decimal values of even nums and upper case letters
+ascii_even numbers = [str(ord(char)) for char in even_nums]
+ascii_ uppercase_letters = [str(ord(char)) for char in upper_chars]
+print (" Number string:",num_string)
+print (" Letter string:", alpha_ string)
+print ("Even numbers:", even_nums)
+print ('ASCII codes of even numbers:", ascii_even_numbers)
+print ("uppercase letters:", upper_chars)
+print ("ASCII codes of uppercase letters:",ascii_uppercase letters:", ascii_uppercase_letters)
