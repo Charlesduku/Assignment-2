@@ -1,0 +1,19 @@
+def decrpt_caesar (cipher_text, Shift):
+    Decrypted_text = ""
+    for char in cipher_text:
+        if char.isalpha(): # check if character is a letter
+        ascii_offset = 65 if char.isupper() else 97
+        decrpted_char =chr ((ord(char)ascii_offset-shift) % 26 + ascii_ offset)
+        Decrypted_text += decrypted_char else:
+        decrypted_text += char # Non-alphabet characters remain unchanged
+            return decrypted_text
+# Ciphered quote (cryptogram)
+ciphered_quote = """VZ FRYSVFU VZCNGVRAG NAQ N YVGGYR VAFRPHER V ZNXR ZVFGNXRF V NZ BHG BS PBAGEBY NAONG GVZRF UNAQYR OHG VS LBH PNAG UNAQYR ZR NG ZL JBEFG GURA LBH FHER NF URYYQBAG QRFREIR ZR NG ZL ORFG ZNEVYLA ZBAEBR"""
+#Try all possible shifts (1, 25): to find the correct shift key.
+    for shift_key in range (1,26):
+        decrypted_quote =
+    decrypted_caesar (ciphered_quote, shift_key)
+        print (f"shift key: {shift_key}")
+        print (decrypted_quote)
+        print ("/n" + "="*50 + "/n")
+# Shift key of the above ciphered quote found as 13
