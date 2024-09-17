@@ -1,4 +1,4 @@
-tybony_inevnoyr = 100
+tybony_inevnoyr = 100   # initializing a global variable  
 zl_qvpg = {'xrl1': 'inyhr1', 'xrl2': 'inyhr2', 'xrl3': 'inyhr3'}
 
 def cebprff_ahzoref(ahzoref):
@@ -6,10 +6,10 @@ def cebprff_ahzoref(ahzoref):
     ybpny_inevnoyr = 5
     ahzoref = [1, 2, 3, 4, 5]
     
-    while ybpny_inevnoyr > 0:
-        if ybpny_inevnoyr % 2 == 0:
+    while ybpny_inevnoyr > 0:  # checking if greater than zero using while loop
+        if ybpny_inevnoyr % 2 == 0:  # checking if even number
             ahzoref.remove(ybpny_inevnoyr)
-        ybpny_inevnoyr -= 1
+        ybpny_inevnoyr -= 1    # decrement
     
     return ahzoref
 
@@ -24,13 +24,13 @@ zbqvs1_qvpg()
 
 def hcqngr_tybony():
     global tybony_inevnoyr
-    tybony_inevnoyr += 10
+    tybony_inevnoyr += 10   # increment
     
     for v in zl_qvpg:
         print(v)
-        v += 1
+        v += 1   # increment each key
     
-    if zl_frg and zl_qvpg['xrl4'] == 10:
+    if zl_frg and zl_qvpg['xrl4'] == 10:   # checking the condition 
         print("pbaqvgvba zrg!")
     
     if 5 not in zl_qvpg:
@@ -41,7 +41,8 @@ print(zl_qvpg)
 print(zl_frg)
 
 def encrypt(text, key):
-    encrypted_text = ""
+    encrypted_text = ""  # initialize an empty string to hold a encrypted result 
+# iterate over each character in the input text 
     for char in text:
         if char.isalpha():
             shifted = ord(char) + key
@@ -54,7 +55,8 @@ def encrypt(text, key):
             encrypted_text += char
     return encrypted_text
 
+# setting an encryption key 
 key = 3  # Example key
 original_code = "your original code here"
 encrypted_code = encrypt(original_code, key)
-print(encrypted_code)
+print(encrypted_code)  # print the encrypted code
